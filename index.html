@@ -41,14 +41,16 @@ button,input{font:inherit}button{cursor:pointer;border:0;color:inherit}.shell{ma
   </div>
 </div>
 <script>
-const games=[
-{id:'neon-click',name:'Neon Clicker',cat:'Arcade',icon:'⚡',color:'purple',desc:'Tap the core as fast as you can in 15 seconds.',type:'clicker',tag:'QUICK PLAY'},
-{id:'star-dodge',name:'Star Dodger',cat:'Action',icon:'🚀',color:'cyan',desc:'Move your ship and dodge the falling space rocks.',type:'dodge',tag:'SURVIVAL'},
-{id:'memory-match',name:'Memory Match',cat:'Puzzle',icon:'🧠',color:'pink',desc:'Flip the cards and find every matching pair.',type:'memory',tag:'BRAIN'},
-{id:'snake-byte',name:'Snake Byte',cat:'Arcade',icon:'🐍',color:'green',desc:'Eat the dots, grow longer, and avoid yourself.',type:'snake',tag:'CLASSIC'},
-{id:'target-tap',name:'Target Tap',cat:'Action',icon:'🎯',color:'orange',desc:'Hit the target before it jumps somewhere else.',type:'target',tag:'REFLEX'},
-{id:'number-rush',name:'Number Rush',cat:'Puzzle',icon:'🔢',color:'blue',desc:'Solve quick addition problems before time runs out.',type:'math',tag:'BRAIN'}
-];
+const games=[{
+  id: 'slope-3',
+  name: 'Slope 3',
+  cat: 'Arcade',
+  icon: '🟢',
+  color: 'green',
+  desc: 'Race down the neon slopes and avoid obstacles.',
+  type: 'iframe',
+  tag: '3D'
+}];
 let activeCat='All',favorites=new Set(JSON.parse(localStorage.getItem('nova-favs')||'[]')),favoritesOnly=false,currentGame=null,cleanupGame=()=>{},lastScore=0;
 const $=id=>document.getElementById(id);
 function render(){
